@@ -17,7 +17,7 @@ root.geometry("450x200")
 # main function
 def organize(folder_path):
     for file in os.listdir(folder_path):
-        if os.path.isfile(os.path.join(folder_path, file)): # Is ir a file?
+        if os.path.isfile(os.path.join(folder_path, file)): # Is it a file?
             extension = os.path.splitext(file)[1]
             # Is it an image?
             if extension in image:
@@ -55,6 +55,7 @@ def select_folder():
     
     path = filedialog.askdirectory()
     organize(path)
+    Label(root, text="Done", font=('Arial', 15)).pack()
 
 
 # App title
